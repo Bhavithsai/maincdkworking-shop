@@ -8,7 +8,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as path from 'path';
 
 
-export class MainWorkshopStack extends Stack {
+export class MainWorkshopStack extends cdk.Stack {
   // constructor(scope: Construct, id: string, props?: StackProps) {
   //   super(scope, id, props);
   constructor(scope: Construct, id: string, stageName: string, props?: cdk.StackProps) {

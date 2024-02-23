@@ -7,6 +7,6 @@ const app = new cdk.App();
 new MyCodePipeline(app, 'Pipeline', {
     env: {
         account: '905418167610',
-        region: "ap-south-1"
+        region: "ap-northeast-1"
     },
 });

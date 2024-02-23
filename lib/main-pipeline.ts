@@ -32,13 +32,13 @@ import { StageFile } from '../lib/stage-file';
     });
     
     const testingStage = pipeline.addStage(new StageFile(this, 'Maintest', {
-      env: { account: '905418167610', region: 'ap-south-1'}
+      env: { account: '905418167610', region: 'ap-northeast-1'}
     }));
     
     testingStage.addPost(new ManualApprovalStep('Manual approval before production'));
     
     const prodStage = pipeline.addStage(new StageFile(this, 'Mainprod', {
-      env: { account: '905418167610', region: 'ap-south-1'}
+      env: { account: '905418167610', region: 'ap-northeast-1'}
     }));
 
   }
