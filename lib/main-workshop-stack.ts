@@ -3,15 +3,16 @@ import * as lambda from 'aws-cdk-lib/aws-lambda';
 import { Construct } from 'constructs';
 import { HitCounter } from './hitcounter';
 import * as apigw from 'aws-cdk-lib/aws-apigateway';
-// import { HitCounter } from './hitcounter';
 import { TableViewer } from 'cdk-dynamo-table-viewer';
 import * as cdk from 'aws-cdk-lib';
 import * as path from 'path';
 
 
 export class MainWorkshopStack extends Stack {
-  constructor(scope: Construct, id: string, props?: StackProps) {
-    super(scope, id, props);
+  // constructor(scope: Construct, id: string, props?: StackProps) {
+  //   super(scope, id, props);
+  constructor(scope: Construct, id: string, stageName: string, props?: cdk.StackProps) {
+    super(scope,stageName, props );
 
   const hello = new lambda.Function(this, 'HelloHandler', {
       runtime: lambda.Runtime.NODEJS_16_X,    // execution environment
