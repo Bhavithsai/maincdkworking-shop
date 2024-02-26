@@ -10,7 +10,7 @@ test('Lambda Has Environment Variables', () => {
     downstream:  new lambda.Function(stack, 'TestFunction', {
       runtime: lambda.Runtime.NODEJS_14_X,
       handler: 'hello.handler',
-      code: lambda.Code.fromAsset('lambda')
+      code: lambda.Code.fromAsset('lib/lambda')
     })
   });
   // THEN
